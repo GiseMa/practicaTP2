@@ -15,13 +15,3 @@ app.listen(8080, () => {
     console.log("Server ok http://localhost:8080/fecha");
 })
 
-/*Servir un archivo HTML: estático en la ruta "/ ". 
-Utiliza el middleware express.static para servir el archivo
- HTML desde una carpeta específica en tu proyecto.*/
-
-/*  const app2 = express();
-
- app2.post("/index.html", (peticion, respuesta)=>{
-
- }
-) */

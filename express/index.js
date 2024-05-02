@@ -1,4 +1,4 @@
-import express from "express"
+/* import express from "express"
 //console.log(express);
 
 const app = express()
@@ -15,4 +15,13 @@ app.get("/", (peticion, respuesta) => {
 
 app.post("/", (peticion, respuesta) => {
     respuesta.send("post desde express")
-})
+}) */
+
+import express from "express";
+import path from "path";
+import url from "url";
+const app = express();
+//el use funciona como un middleware. Es una funcion que se ejecuta en el medio
+app.use(express.static('public')) 
+
+const filename = url.fileURLToPath(import.meta.url)

@@ -4,15 +4,21 @@ Utiliza el middleware express.static para servir el archivo
 
  import express from "express";
  import path from "path";
+ import url from "url";
  const app = express();
+ //el use funciona como un middleware. Es una funcion que se ejecuta en el medio
+ app.use(express.static('public')) 
 
+ const __filename = url.fileURLToPath(import.meta.url)
+ const __dirname = path.dirname(filename);
+ 
 
- app.use('/public', express.static(path.join(__dirname, 'public')))
-
+ app.get("/:archivo", (petic, rta)=>{
+    rta.sendFile(path.join(__dirname, "public", "index.html"));
+ })
 
 app.listen(8080, () => {
-    console.log("Server ok http://localhost:8080/fecha");
+    console.log("Server ok http://localhost:8080/archivo");
 })
 
 
- 

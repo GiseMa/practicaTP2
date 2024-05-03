@@ -14,7 +14,7 @@ Utiliza el middleware express.static para servir el archivo
  
 
  app.get("/:archivo", (petic, rta)=>{
-    rta.sendFile(path.join(__dirname, "public", "index.html"));
+    rta.sendFile(path.join(__dirname, "public", "C:\Users\gisel\Desktop\AnalisisDeSistemasORT\2°1°cuatrimestre\TP2\Nuevo\express\public\index.html"));
  })
 
 app.listen(8080, () => {
